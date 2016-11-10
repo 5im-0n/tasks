@@ -9,6 +9,9 @@
 			have it around for a lot of things for now.
 		-->
 
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap -->
+
 		<link rel="stylesheet" href="css/app.css">
 		<!--
 			This file will be empty in the beginning, but since we know we will be using this let's add it now already.
@@ -16,10 +19,32 @@
 	</head>
 	<body>
 
-		<script type="text/javascript" src="index.js"></script>
 		<!--
-			Our code goes here
+			We have the first screen of our app inside the index.html file.
+			This is not that nice, because if we have to add more screens later we clutter our index.html file with all
+			the screens our app will have.
+			So we will have to move this out later.
 		-->
+
+		<div class="container">
+			<h1>Tasks</h1>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form id="add-task-form" class="form-inline">
+						<div class="form-group">
+							<label for="task" class="control-label">New task</label>
+							<input type="text" class="form-control" id="task">
+						</div>
+						<button class="btn btn-default" id="add-task" type="submit">Add</button>
+					</form>
+					<!-- our tasks go here -->
+					<ol id="task-list" class="list-group">
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="index.js"></script>
 
 	</body>
 </html>
