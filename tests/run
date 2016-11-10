@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PATH=$(pwd)/firefox:$PATH
+./node_modules/.bin/nightwatch
+
